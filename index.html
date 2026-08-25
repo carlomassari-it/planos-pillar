@@ -203,13 +203,13 @@
     <span class="discount-badge" data-discount-badge>DESCUENTO</span>
     <div class="card-tier">Silver</div>
     <div class="card-price-wrapper">
-      <span class="price-original" data-orig-label>$119</span>
+      <span class="price-original" data-orig-label>$159</span>
       <span class="card-price-currency">$</span>
-      <span class="card-price" data-monthly="119" data-annual="99" data-orig-monthly="119" data-orig-annual="99">119</span>
+      <span class="card-price" data-monthly="159" data-annual="129" data-orig-monthly="159" data-orig-annual="129">159</span>
       <span class="card-price-period">/mes</span>
     </div>
     <div class="card-price-note">
-      <span class="annual-note" style="display:none;"><span class="card-price-original">$119/mes</span> — compromiso 12 meses</span>
+      <span class="annual-note" style="display:none;"><span class="card-price-original">$159/mes</span> — compromiso 12 meses</span>
       <span class="monthly-note">compromiso de 12 meses</span>
     </div>
     <div class="card-divider"></div>
@@ -399,12 +399,12 @@
         </tr>
         <tr class="section-row"><td colspan="4">Precios</td></tr>
         <tr><td>Precio mensual</td>
-          <td><span class="table-value table-price" data-plan="silver" data-monthly="119" data-annual="99" data-orig-monthly="119" data-orig-annual="99">$119</span></td>
+          <td><span class="table-value table-price" data-plan="silver" data-monthly="159" data-annual="129" data-orig-monthly="159" data-orig-annual="129">$159</span></td>
           <td class="featured-col"><span class="table-value table-price" data-plan="gold" data-monthly="229" data-annual="189" data-orig-monthly="229" data-orig-annual="189">$229</span></td>
           <td><span class="table-value table-price" data-plan="platinum" data-monthly="329" data-annual="279" data-orig-monthly="329" data-orig-annual="279">$329</span></td>
         </tr>
         <tr><td>Ahorro con plan anual</td>
-          <td><span class="table-value" style="color:var(--green)">$240/año</span></td>
+          <td><span class="table-value" style="color:var(--green)">$360/año</span></td>
           <td class="featured-col"><span class="table-value" style="color:var(--green)">$480/año</span></td>
           <td><span class="table-value" style="color:var(--green)">$600/año</span></td>
         </tr>
@@ -417,7 +417,7 @@
     <div class="accordion-item">
       <button class="accordion-toggle" type="button">
         <span>Silver</span>
-        <span class="plan-meta accordion-price" data-monthly="119" data-annual="99" data-orig-monthly="119" data-orig-annual="99">$119/mes</span>
+        <span class="plan-meta accordion-price" data-monthly="159" data-annual="129" data-orig-monthly="159" data-orig-annual="129">$159/mes</span>
         <svg class="chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
       </button>
       <div class="accordion-panel">
@@ -436,8 +436,8 @@
         <div class="accordion-row"><span>Número de presupuestos</span><span>20</span></div>
         <div class="accordion-row"><span>Almacenamiento en la nube</span><span>10 GB</span></div>
         <div class="accordion-section-title">Precios</div>
-        <div class="accordion-row"><span>Precio mensual</span><span class="accordion-price-row" data-monthly="119" data-annual="99" data-orig-monthly="119" data-orig-annual="99">$119</span></div>
-        <div class="accordion-row"><span>Ahorro con plan anual</span><span class="accordion-savings" data-monthly="240" data-annual="240" style="color:var(--green)">$240/año</span></div>
+        <div class="accordion-row"><span>Precio mensual</span><span class="accordion-price-row" data-monthly="159" data-annual="129" data-orig-monthly="159" data-orig-annual="129">$159</span></div>
+        <div class="accordion-row"><span>Ahorro con plan anual</span><span class="accordion-savings" data-monthly="360" data-annual="360" style="color:var(--green)">$360/año</span></div>
       </div>
     </div>
     <div class="accordion-item featured open">
@@ -496,7 +496,7 @@
 </section>
 
 <footer class="page-footer">
-  <p>© 2025 Pillar — La solución completa para gestionar tu empresa constructora. Todos los precios son más impuestos aplicables.</p>
+  <p>© 2026 Pillar — La solución completa para gestionar tu empresa constructora. Todos los precios son más impuestos aplicables.</p>
 </footer>
 
 <script>
@@ -543,7 +543,7 @@
     if(offerActive)return;offerActive=true;document.body.classList.add('offer-active');
     document.getElementById('offer-banner').setAttribute('aria-hidden','false');
     const promoM={silver:89,gold:169,platinum:249},promoA={silver:69,gold:139,platinum:209};
-    function pk(m){if(m===119)return'silver';if(m===229)return'gold';if(m===329)return'platinum';return null;}
+    function pk(m){if(m===159)return'silver';if(m===229)return'gold';if(m===329)return'platinum';return null;}
     document.querySelectorAll('.card-price').forEach(el=>{const k=pk(parseInt(el.dataset.origMonthly));if(k){el.dataset.monthly=promoM[k];el.dataset.annual=promoA[k];}});
     document.querySelectorAll('[data-orig-label]').forEach(el=>{const card=el.closest('.pricing-card');const pe=card?card.querySelector('.card-price'):null;if(pe&&pe.dataset.origMonthly)el.textContent='$'+pe.dataset.origMonthly;});
     document.querySelectorAll('.table-price').forEach(el=>{const k=pk(parseInt(el.dataset.origMonthly));if(k){el.dataset.monthly=promoM[k];el.dataset.annual=promoA[k];}});
